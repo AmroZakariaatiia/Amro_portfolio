@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #home {
+            background-color: #00ccff;
+            color: white;
+        }
+        #projects, #certificates {
+            background-color: #fff;
+        }
+        #contact {
+            background-color: #333;
+            color: white;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .project, .certificate {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: left;
+        }
+        .contact-links a {
+            color: #00ccff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Hey, I'm [Your Name]</h1>
+        <p>Welcome to my portfolio! I'm a [your profession, e.g., web developer] passionate about creating dope stuff.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>A cool website I built with HTML, CSS, and JS. [Describe it briefly or add a link].</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>A sick app I coded for fun. [Describe it briefly or add a link].</p>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <h2>My Certificates</h2>
+        <div class="certificate">
+            <h3>Web Development Bootcamp</h3>
+            <p>Earned from [Provider, e.g., Udemy] in [Year].</p>
+        </div>
+        <div class="certificate">
+            <h3>JavaScript Mastery</h3>
+            <p>Earned from [Provider, e.g., Coursera] in [Year].</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Hit me up for collabs or just to vibe!</p>
+        <div class="contact-links">
+            <a href="mailto:your.email@example.com">Email</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href');
+                document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
